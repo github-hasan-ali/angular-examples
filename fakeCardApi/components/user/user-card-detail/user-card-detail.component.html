@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="credit-card-box" *ngIf="userWithCardDto&&userWithCardDto.cards.length>0">
+      <div class="credit-card-group">
+              <div *ngFor="let card of userWithCardDto.cards"
+              [class]="'credit-card'+getClass(card.id)">
+                  <img src="/assets/chip.png" alt="" class="chip">
+                  <div class="card-number">{{card.number}}</div>
+                  <div class="card-user-name">{{userWithCardDto.name+' '+userWithCardDto.surname}}</div>
+          </div>
+      </div>
+      <div class="arrows">
+          <button class="left" (click)="left()">Left</button>
+          <button class="right" (click)="right()">Right</button>
+      </div>
+  </div>
+  //İşlemler eklenecek
+</div>

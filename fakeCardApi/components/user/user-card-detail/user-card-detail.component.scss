@@ -1,0 +1,37 @@
+.credit-card-box{
+  .credit-card-group{
+     position: relative;
+     height: 500px;
+     .credit-card{
+         position: absolute;
+         width: 300px;
+         height: 200px;
+         background-color: black;
+         color: #fafafa;
+         border-radius: 1rem;
+         left: 100%;
+         top:50%;
+         transform: translate(-50%,-50%);
+         width: 200px;
+         height: 125px;
+         opacity: 0;
+         transition: .8s ease-in-out;
+         &.before{
+             width: 200px;
+             height: 125px;
+             left:0px;
+             transition: .5s ease-in-out;
+         }
+         &.active{
+             left:50%;
+             width: 570px;
+             height: 350px;
+             opacity: 1;
+             transition: .5s ease-in-out;
+         }
+         .chip{
+             width: 40px;
+         }
+     }
+  }
+ }

@@ -1,0 +1,31 @@
+<div class="container">
+  <div
+    class="table-responsive"
+  >
+    <table
+      class="table table-primary"
+    >
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">View Detail</th>
+          <th scope="col">Name</th>
+          <th scope="col">Surname</th>
+          <th scope="col">Age</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.id}}</td>
+          <td><button class="btn btn-info" [routerLink]="['cards',user.id]">View Detail</button></td>
+          <td>{{user.name}}</td>
+          <td>{{user.surname}}</td>
+          <td>{{user.age}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
